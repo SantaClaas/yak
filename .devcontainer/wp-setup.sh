@@ -22,9 +22,10 @@ if $WP_RESET ; then
     rm wp-config.php;
 fi
 
-if [ ! -f wp-config.php ]; then 
+if [ ! -f wp-config.php ]; then
     echo "Configuring";
-    wp config create --dbhost="db" --dbname="wordpress" --dbuser="wp_user" --dbpass="wp_pass" --skip-check;
+    # wp config create --dbhost="db" --dbname="wordpress" --dbuser="wp_user" --dbpass="wp_pass" --skip-check;
+    cp $DEVDIR/wp-config.php /var/www/html/wp-config.php
     wp core install --url="http://localhost:8080" --title="$SITE_TITLE" --admin_user="$ADMIN_USER" --admin_email="$ADMIN_EMAIL" --admin_password="$ADMIN_PASS" --skip-email;
     wp plugin install $PLUGINS --activate
     #TODO: Only activate plugin if it contains files - i.e. might be developing a theme instead

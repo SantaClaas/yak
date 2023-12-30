@@ -1,0 +1,5 @@
+- Used dev containers
+- Used Planet Scale DB
+    - Used https://github.com/docker-library/wordpress/blob/master/wp-config-docker.php
+    - And needed to set this `define( 'MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );` https://github.com/planetscale/discussion/discussions/214
+- Used docker secrets

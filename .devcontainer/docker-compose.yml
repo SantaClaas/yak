@@ -1,37 +1,35 @@
-version: '3'
+version: "3"
 services:
   wordpress:
     build: ./
     ports:
       - 8080:80
-    depends_on:
-      - db
     environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: wp_user
-      WORDPRESS_DB_PASSWORD: wp_pass
-      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_HOST_FILE: /run/secrets/database_host
+      WORDPRESS_DB_USER_FILE: /run/secrets/database_username
+      WORDPRESS_DB_PASSWORD_FILE: /run/secrets/database_password
+      WORDPRESS_DB_NAME_FILE: /run/secrets/database_name
       WORDPRESS_DEBUG: 1
-    links:
-      - db
     volumes:
       #Swap the folder path for plugin vs theme development
       - wordpress:/var/www/html
       - ../:/var/www/html/wp-content/plugins/plugin-dev
       #- ../:/var/www/html/wp-content/themes/theme-dev
- 
-  db:
-    image: mariadb:10
-    environment:
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wp_user
-      MYSQL_PASSWORD: wp_pass
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
-    ports:
-      - 3306:3306
-    volumes:
-      - data:/var/lib/mysql
+    secrets:
+      - database_host
+      - database_name
+      - database_username
+      - database_password
 
 volumes:
   wordpress:
-  data:
+
+secrets:
+  database_host:
+    file: ./secrets/database_host
+  database_name:
+    file: ./secrets/database_name
+  database_username:
+    file: ./secrets/database_username
+  database_password:
+    file: ./secrets/database_password

@@ -10,7 +10,7 @@
 	//"workspaceFolder": "/var/www/html/wp-content/themes/theme-dev",
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
+	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"php.suggest.basic": false // avoids duplicate autocomplete
 	},
@@ -23,6 +23,7 @@
 	],
 
 	// Sets up WordPress on container start.
-	"postCreateCommand": ".devcontainer/wp-setup.sh",
+	// "postCreateCommand": ".devcontainer/wp-setup.sh",
+	"postCreateCommand": "cp ./wp-config.php /var/www/html/wp-config.php",
 	"remoteUser": "vscode"
 }
