@@ -68,4 +68,4 @@
         </a>
     </nav>
 
-	<main id="content">
+	<main id="content" class="col-start-2">
