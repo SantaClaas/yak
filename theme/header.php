@@ -36,8 +36,8 @@
     <aside class="gap-1 col-start-1 col-end-2 row-start-1 row-end-3">
         <!-- Prefer hardcoded navigation as WP one is too hard to get working with these icons.
          WP navigation support will be added at a later point -->
-        <nav class="flex flex-col justify-center p-[5px] w-20 h-full">
-            <a class="h-14 flex flex-col gap-1 items-center" href="/">
+        <nav class="flex flex-col gap-1 justify-center p-[5px] w-20 h-full">
+            <!-- <a class="h-14 flex flex-col gap-1 items-center" href="/">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                     <path
                         d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z">
@@ -71,16 +71,19 @@
                 <span class="text-base font-semibold">
                     Contact
                 </span>
-            </a>
+            </a> -->
+
 
             <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'menu-1',
-                    // 'menu_id' => 'primary-menu',
-                    'items_wrap' => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
-                )
-            );
+
+
+            $items = wp_get_nav_menu_items('menu-1');
+
+            foreach ($items as $item) {
+                echo '<a class="h-14 flex flex-col gap-1 items-center" href="' . $item->url . '">';
+                echo $item->title;
+                echo '</a>';
+            }
             ?>
         </nav>
     </aside>
