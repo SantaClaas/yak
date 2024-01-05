@@ -46,5 +46,7 @@ if (have_posts()) {
 }
 ?>
 
-<?php
-get_footer();
+<template id="hiding-this">
+
+	<?php
+	get_footer();
