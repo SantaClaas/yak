@@ -72,6 +72,16 @@
                     Contact
                 </span>
             </a>
+
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'menu-1',
+                    // 'menu_id' => 'primary-menu',
+                    'items_wrap' => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
+                )
+            );
+            ?>
         </nav>
     </aside>
 
