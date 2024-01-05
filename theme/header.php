@@ -10,29 +10,33 @@
  * @package claas.dev
  */
 
-?><!doctype html>
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class('py-6 pr-6 bg-slate-200 text-slate-900 text-lg grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] min-h-screen'); ?>>
 
-<?php wp_body_open(); ?>
+    <?php wp_body_open(); ?>
 
-	<a href="#content" class="sr-only"><?php esc_html_e( 'Skip to content', 'claas-dev' ); ?></a>
+    <a href="#content" class="sr-only">
+        <?php esc_html_e('Skip to content', 'claas-dev'); ?>
+    </a>
 
-	<!-- Open header -->
-	<?php get_template_part( 'template-parts/layout/header', 'content' ); ?>
+    <!-- Open header -->
+    <?php get_template_part('template-parts/layout/header', 'content'); ?>
 
 
-    <aside>
-	<!-- Prefer hardcoded navigation as WP one is too hard to get working with these icons.
-		 WP navigation support will be added at a later point -->
-        <nav class="flex flex-col justify-center gap-1 col-start-1 col-end-2 row-start-1 row-end-3 w-20 p-[5px]">
+    <aside class="gap-1 col-start-1 col-end-2 row-start-1 row-end-3">
+        <!-- Prefer hardcoded navigation as WP one is too hard to get working with these icons.
+         WP navigation support will be added at a later point -->
+        <nav class="flex flex-col justify-center p-[5px] w-20 h-full">
             <a class="h-14 flex flex-col gap-1 items-center" href="/">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                     <path
@@ -71,4 +75,4 @@
         </nav>
     </aside>
 
-	<main id="content" class="col-start-2">
+    <main id="content" class="col-start-2">
