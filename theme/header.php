@@ -50,5 +50,3 @@
             ?>
         </nav>
     </aside>
-
-    <main id="content" class="col-start-2">
