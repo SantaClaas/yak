@@ -16,7 +16,7 @@ get_header();
 ?>
 
 
-<main id="content" class="col-start-2 grid gap-4">
+<main id="content" class="col-start-2 grid gap-2">
 	<?php
 	if (have_posts()) {
 
