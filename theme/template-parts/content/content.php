@@ -28,7 +28,7 @@
 
 	<?php claas_dev_post_thumbnail(); ?>
 
-	<section <?php claas_dev_content_class('entry-content'); ?>>
+	<!-- <section <?php claas_dev_content_class('entry-content'); ?>>
 		<?php
 		the_content();
 
@@ -39,7 +39,8 @@
 			)
 		);
 		?>
-	</section><!-- .entry-content -->
+	</section> -->
+	<!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php claas_dev_entry_footer(); ?>
