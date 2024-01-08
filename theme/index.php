@@ -15,6 +15,22 @@
 get_header();
 ?>
 
+<script>
+	function share(text, url) {
+		const shareData = {
+			title: document.title,
+			text,
+			url: window.location.href,
+		}
+
+		if (!navigator.share || !navigator.canShare || !navigator.canShare(shareData))
+			return;
+
+		navigator.share(shareData)
+			.then(() => console.debug('Successful share'))
+			.catch((error) => console.error('Error sharing', error));
+	}
+</script>
 
 <main id="content"
 	class="col-start-2 grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 h-min">
@@ -23,12 +39,12 @@ get_header();
 
 		if (is_home() && !is_front_page()):
 			?>
-			<header class="entry-header">
-				<h1 class="entry-title">
-					<?php single_post_title(); ?>
-				</h1>
-			</header><!-- .entry-header -->
-			<?php
+							<header class="entry-header">
+								<h1 class="entry-title">
+									<?php single_post_title(); ?>
+								</h1>
+							</header><!-- .entry-header -->
+							<?php
 		endif;
 
 		// Load posts loop.
@@ -47,6 +63,14 @@ get_header();
 	?>
 
 </main><!-- #content -->
+
+<!-- Enable buttons if sharing is supported -->
+<script>
+	const shareButtons = document.querySelectorAll('#share');
+	if (navigator.share)
+		shareButtons.forEach(button => button.classList.remove('hidden'));
+
+</script>
 <template id="hiding-this">
 
 	<?php
