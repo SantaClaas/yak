@@ -15,10 +15,13 @@ A custom theme based on \_tw
 
 - 5 sub-pages
   - _do blog entries count?_
-- 2 external plugins or ~~1 developed plugin~~
-  - classic editor ✅
-  - Mardown support pluging
+- 2 external plugins or ~~1 developed plugin~~ ✅
+  - [Classic Editor](https://wordpress.org/plugins/classic-editor/) ✅
+    - _As I am developing a classic theme, the classic editor makes editing it easier_
+  - [External Markdown](https://wordpress.org/plugins/external-markdown/) ✅
+    - _I prefer git as version control system to manage my plain text content_
   - ~~Menu icons (not working)~~
+    - _Tried it, didn't work because upload of SVGs bugs out so I just injected the SVG markup in the label_
 - 2 Social Media integrations
   - Mastodon
   - LinkedIn???
