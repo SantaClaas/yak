@@ -39,12 +39,12 @@ get_header();
 
 		if (is_home() && !is_front_page()):
 			?>
-							<header class="entry-header">
-								<h1 class="entry-title">
-									<?php single_post_title(); ?>
-								</h1>
-							</header><!-- .entry-header -->
-							<?php
+																			<header class="entry-header">
+																				<h1 class="entry-title">
+																					<?php single_post_title(); ?>
+																				</h1>
+																			</header><!-- .entry-header -->
+																			<?php
 		endif;
 
 		// Load posts loop.
@@ -66,12 +66,10 @@ get_header();
 
 <!-- Enable share buttons only if sharing is supported -->
 <script>
-	if(!navigator.share)
-		return;
-
-	const shareButtons = document.querySelectorAll('#share');
-	shareButtons.forEach(button => button.classList.remove('hidden'));
-
+	if(navigator.share){
+		const shareButtons = document.querySelectorAll('#share');
+		shareButtons.forEach(button => button.classList.remove('hidden'));
+	}
 </script>
 <template id="hiding-this">
 
