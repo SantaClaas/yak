@@ -16,7 +16,8 @@ get_header();
 ?>
 
 
-<main id="content" class="col-start-2 grid gap-2">
+<main id="content"
+	class="col-start-2 grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 h-min">
 	<?php
 	if (have_posts()) {
 
@@ -40,10 +41,8 @@ get_header();
 		claas_dev_the_posts_navigation();
 
 	} else {
-
 		// If no content, include the "No posts found" template.
 		get_template_part('template-parts/content/content', 'none');
-
 	}
 	?>
 

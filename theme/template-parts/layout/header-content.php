@@ -9,7 +9,7 @@
 
 ?>
 
-<header id="masthead" class="mb-6">
+<header id="masthead" class="mb-6 col-start-2 col-end-3">
 
 
 	<hgroup>

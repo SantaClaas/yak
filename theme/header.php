@@ -33,10 +33,10 @@
     <?php get_template_part('template-parts/layout/header', 'content'); ?>
 
 
-    <aside class="gap-1 col-start-1 col-end-2 row-start-1 row-end-3">
+    <aside class="col-start-1 row-start-1 row-end-3 w-20 h-full grid grid-rows-subgrid">
         <!-- Prefer hardcoded navigation as WP one is too hard to get working with these icons.
          WP navigation support will be added at a later point -->
-        <nav class="flex flex-col gap-1 justify-center p-[5px] w-20 h-full">
+        <nav class="row-start-2 flex flex-col gap-1 p-[5px] w-20 h-full">
 
             <?php
 
@@ -49,4 +49,5 @@
             }
             ?>
         </nav>
+
     </aside>

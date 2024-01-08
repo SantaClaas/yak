@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('max-w-[40rem] bg-slate-100 p-4 rounded-xl p-4 space-y-3'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('bg-slate-100 p-4 rounded-xl p-4 space-y-3'); ?>>
 
 	<?php the_post_thumbnail('post-thumbnail', ['class' => 'rounded-xl h-80 object-cover object-center']); ?>
 
