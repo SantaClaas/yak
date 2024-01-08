@@ -1,0 +1,1 @@
+This directory contains the markdown for the posts which is pulled by the [external-markdown WordPress plugin](https://wordpress.org/plugins/external-markdown). The content of these posts is AI generated with Google Bard. This is because this page is only intended as a university project to be never published as actual page and the content just servers as better lorem ipsum.

@@ -15,7 +15,7 @@ A custom theme based on \_tw
 
 - 5 sub-pages
   - _do blog entries count?_
-- 2 external plugind or ~~1 developed plugin~~
+- 2 external plugins or ~~1 developed plugin~~
   - classic editor ✅
   - Mardown support pluging
   - ~~Menu icons (not working)~~
