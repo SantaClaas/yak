@@ -11,6 +11,33 @@ claas.dev
 
 A custom theme based on \_tw
 
+## TODO
+
+- 5 sub-pages
+  - _do blog entries count?_
+- 2 external plugind or ~~1 developed plugin~~
+  - classic editor ✅
+  - Mardown support pluging
+  - ~~Menu icons (not working)~~
+- 2 Social Media integrations
+  - Mastodon
+  - LinkedIn???
+  - Threads
+  - _was ist eine "gängige Social Media Platform"?_
+- 2 Languages
+  - English
+  - German
+- Theme based on free template
+  - _Used [_tw](https://underscoretw.com/)_
+  - With at least 3 changes
+    - A Picture or background pattern
+      - A background picture or just a picture in the theme?
+    - Color of an element (e.g. clicked links)
+    - Font size or type
+
+
+
+
 ## Quickstart
 
 ### Installation
