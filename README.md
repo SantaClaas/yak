@@ -22,10 +22,9 @@ A custom theme based on \_tw
     - _I prefer git as version control system to manage my plain text content_
   - ~~Menu icons (not working)~~
     - _Tried it, didn't work because upload of SVGs bugs out so I just injected the SVG markup in the label_
-- 2 Social Media integrations
+- 2 Social Media integrations ALMOST
   - Mastodon
-  - LinkedIn???
-  - Threads
+  - Reddit
   - _was ist eine "gängige Social Media Platform"?_
   - _was ist eine "integration"?_
 - 2 Languages

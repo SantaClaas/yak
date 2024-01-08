@@ -64,11 +64,13 @@ get_header();
 
 </main><!-- #content -->
 
-<!-- Enable buttons if sharing is supported -->
+<!-- Enable share buttons only if sharing is supported -->
 <script>
+	if(!navigator.share)
+		return;
+
 	const shareButtons = document.querySelectorAll('#share');
-	if (navigator.share)
-		shareButtons.forEach(button => button.classList.remove('hidden'));
+	shareButtons.forEach(button => button.classList.remove('hidden'));
 
 </script>
 <template id="hiding-this">
