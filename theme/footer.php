@@ -14,8 +14,8 @@
 
 <?php get_template_part('template-parts/layout/footer', 'content'); ?>
 
-<?php wp_footer(); ?>
 </template><!-- #hiding-this -->
+<?php wp_footer(); ?>
 </body>
 
 </html>
