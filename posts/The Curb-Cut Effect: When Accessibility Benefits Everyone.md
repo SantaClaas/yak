@@ -1,5 +1,3 @@
-# The Curb-Cut Effect: When Accessibility Benefits Everyone
-
 In the world of urban planning and design, the term "curb cut" is synonymous with accessibility. These gently sloping ramps that bridge the gap between sidewalks and streets were initially designed to provide wheelchair users with seamless mobility. However, the impact of curb cuts extends far beyond their intended purpose, demonstrating a fascinating phenomenon known as the "curb-cut effect."
 
 The curb-cut effect refers to the unintended positive consequences of features designed for people with disabilities. These features, once implemented, often prove to be beneficial to a wider range of individuals, including parents with strollers, cyclists, delivery workers, and even pedestrians without disabilities.

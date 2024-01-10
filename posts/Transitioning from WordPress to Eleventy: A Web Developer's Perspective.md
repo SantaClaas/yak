@@ -1,5 +1,3 @@
-# Transitioning from WordPress to Eleventy: A Web Developer's Perspective
-
 As a web developer, I've spent countless hours crafting websites using various content management systems (CMS), including WordPress. While WordPress undoubtedly offers a user-friendly interface and a vast repository of plugins, I've come to realize that its complexity can hinder the creative process and limit the flexibility of website design. This led me to explore static site generators (SSGs), and Eleventy quickly emerged as the frontrunner.
 
 Eleventy's simplicity and intuitive syntax have made it a refreshing change from the intricacies of WordPress. Its Liquid-like templating engine allows me to focus on the content and structure of my website without getting bogged down in configuration and maintenance. Additionally, Eleventy's plugin ecosystem provides a wealth of extensions that enhance its capabilities, further expanding my creative freedom.

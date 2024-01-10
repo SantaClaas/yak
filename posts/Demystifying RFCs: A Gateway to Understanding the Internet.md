@@ -1,4 +1,3 @@
-# Demystifying RFCs: A Gateway to Understanding the Internet
 
 In the realm of computer networking, the term "RFC" often evokes a sense of intimidation, conjuring up images of dense technical jargon and complex protocols. However, the reality is that reading IETF RFCs (Request For Comments), the official documents that define the protocols and standards that underpin the internet, is not as daunting as it may seem. With a bit of patience and the right approach, RFCs can be a valuable source of knowledge, offering insights into the inner workings of the internet and providing a deeper understanding of how it functions.
 
