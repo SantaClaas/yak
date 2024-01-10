@@ -39,12 +39,12 @@ get_header();
 
 		if (is_home() && !is_front_page()):
 			?>
-																			<header class="entry-header">
-																				<h1 class="entry-title">
-																					<?php single_post_title(); ?>
-																				</h1>
-																			</header><!-- .entry-header -->
-																			<?php
+				<header class="entry-header">
+					<h1 class="entry-title">
+						<?php single_post_title(); ?>
+					</h1>
+				</header><!-- .entry-header -->
+				<?php
 		endif;
 
 		// Load posts loop.
