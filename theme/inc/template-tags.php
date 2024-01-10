@@ -14,23 +14,25 @@ if (!function_exists('claas_dev_posted_on')):
 	function claas_dev_posted_on()
 	{
 		$time_string = '<time datetime="%1$s">%2$s</time>';
-		if (get_the_time('U') !== get_the_modified_time('U')) {
-			$time_string = '<time datetime="%1$s">%2$s</time><time datetime="%3$s">%4$s</time>';
-		}
+		// if (get_the_time('U') !== get_the_modified_time('U')) {
+		// 	$time_string = '<time datetime="%1$s">%2$s</time><time datetime="%3$s">%4$s</time>';
+		// }
 
 		$time_string = sprintf(
 			$time_string,
 			esc_attr(get_the_date(DATE_W3C)),
 			esc_html(get_the_date()),
-			esc_attr(get_the_modified_date(DATE_W3C)),
-			esc_html(get_the_modified_date())
+			// esc_attr(get_the_modified_date(DATE_W3C)),
+			// esc_html(get_the_modified_date())
 		);
 
-		printf(
-			'<a href="%1$s" rel="bookmark">%2$s</a>',
-			esc_url(get_permalink()),
-			$time_string // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		);
+		// printf(
+		// 	'<a href="%1$s" rel="bookmark">%2$s</a>',
+		// 	esc_url(get_permalink()),
+		// 	$time_string // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// );
+
+		print($time_string);
 	}
 endif;
 
@@ -202,21 +204,21 @@ if (!function_exists('claas_dev_post_thumbnail')):
 		if (is_singular()):
 			?>
 
-			<figure>
-				<?php the_post_thumbnail(); ?>
-			</figure><!-- .post-thumbnail -->
+												<figure>
+													<?php the_post_thumbnail(); ?>
+												</figure><!-- .post-thumbnail -->
 
-			<?php
+												<?php
 		else:
 			?>
 
-			<figure>
-				<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<?php the_post_thumbnail(); ?>
-				</a>
-			</figure>
+												<figure>
+													<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+														<?php the_post_thumbnail(); ?>
+													</a>
+												</figure>
 
-			<?php
+												<?php
 		endif; // End is_singular().
 	}
 endif;
