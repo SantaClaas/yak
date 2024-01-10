@@ -13,7 +13,7 @@ if (!function_exists('claas_dev_posted_on')):
 	 */
 	function claas_dev_posted_on()
 	{
-		$time_string = '<time datetime="%1$s">%2$s</time>';
+		$time_string = '<time class="align-middle ml-auto" datetime="%1$s">%2$s</time>';
 		// if (get_the_time('U') !== get_the_modified_time('U')) {
 		// 	$time_string = '<time datetime="%1$s">%2$s</time><time datetime="%3$s">%4$s</time>';
 		// }
@@ -204,21 +204,21 @@ if (!function_exists('claas_dev_post_thumbnail')):
 		if (is_singular()):
 			?>
 
-												<figure>
-													<?php the_post_thumbnail(); ?>
-												</figure><!-- .post-thumbnail -->
+																																	<figure>
+																																		<?php the_post_thumbnail(); ?>
+																																	</figure><!-- .post-thumbnail -->
 
-												<?php
+																																	<?php
 		else:
 			?>
 
-												<figure>
-													<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-														<?php the_post_thumbnail(); ?>
-													</a>
-												</figure>
+																																	<figure>
+																																		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+																																			<?php the_post_thumbnail(); ?>
+																																		</a>
+																																	</figure>
 
-												<?php
+																																	<?php
 		endif; // End is_singular().
 	}
 endif;
