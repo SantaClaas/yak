@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying pages
+ * Template part for displaying single posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,52 +9,37 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('bg-slate-100 p-4 rounded-xl p-4 flex flex-col justify-between gap-3 w-max'); ?> class="">
 
-	<header class="entry-header">
+	<?php the_post_thumbnail('post-thumbnail', ['class' => 'rounded-xl h-80 max-w-[40rem] mb-4 mx-auto object-cover object-center']); ?>
+
+
+	<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+	<div <?php claas_dev_content_class('entry-content'); ?>>
 		<?php
-		if ( ! is_front_page() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} else {
-			the_title( '<h2 class="entry-title">', '</h2>' );
-		}
-		?>
-	</header><!-- .entry-header -->
-
-	<?php claas_dev_post_thumbnail(); ?>
-
-	<div <?php claas_dev_content_class( 'entry-content' ); ?>>
-		<?php
-		the_content();
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					__('Continue reading<span class="sr-only"> "%s"</span>', 'claas-dev'),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)
+		);
 
 		wp_link_pages(
 			array(
-				'before' => '<div>' . __( 'Pages:', 'claas-dev' ),
-				'after'  => '</div>',
+				'before' => '<div>' . __('Pages:', 'claas-dev'),
+				'after' => '</div>',
 			)
 		);
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit <span class="sr-only">%s</span>', 'claas-dev' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post-${ID} -->
