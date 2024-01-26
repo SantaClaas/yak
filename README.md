@@ -13,8 +13,12 @@ A custom theme based on \_tw
 
 ## TODO
 
-- 5 sub-pages
-  - _do blog entries count?_
+- 5 sub-pages ✅
+  - Contact ✅
+  - Impressum ✅
+  - About ✅
+  - CV ✅
+  - Blogs ✅
 - 2 external plugins or ~~1 developed plugin~~ ✅
   - [Classic Editor](https://wordpress.org/plugins/classic-editor/) ✅
     - _As I am developing a classic theme, the classic editor makes editing it easier_
@@ -22,21 +26,19 @@ A custom theme based on \_tw
     - _I prefer git as version control system to manage my plain text content_
   - ~~Menu icons (not working)~~
     - _Tried it, didn't work because upload of SVGs bugs out so I just injected the SVG markup in the label_
-- 2 Social Media integrations ALMOST
-  - Mastodon
-  - Reddit
-  - _was ist eine "gängige Social Media Platform"?_
-  - _was ist eine "integration"?_
-- 2 Languages
-  - English
-  - German
-- Theme based on free template
+- 2 Social Media integrations ✅
+  - Mastodon ✅
+  - Reddit ✅
+- 2 Languages ✅
+  - English ✅
+  - German ✅
+  - _used TranslatePress_ ✅
+- Theme based on free template ✅
   - _Used [_tw](https://underscoretw.com/)_
-  - With at least 3 changes
-    - A Picture or background pattern
-      - A background picture or just a picture in the theme?
-    - Color of an element (e.g. clicked links)
-    - Font size or type
+  - With at least 3 changes ✅
+    - A Picture or background pattern ✅
+    - Color of an element (e.g. clicked links) ✅
+    - Font size or type ✅
 
 
 
